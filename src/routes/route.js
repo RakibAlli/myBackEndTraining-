@@ -1,20 +1,30 @@
 const express = require('express');
-const abc = require('../introduction/intro')
+const welcome=require('../logger/logger');
+const calender=require('../util/helper');
+const string=require('../validator/formatter');
+
 const router = express.Router();
 
+welcome.welcome();
+calender.printDate();
+calender.printMonth();
+calender.getBatchInfo();
+string.trim();
+string.changetoLowerCase();
+string.changetoUpperCase();
+
+
+
+
+
+
+
 router.get('/test-me', function (req, res) {
-    console.log('My batch is', abc.name)
-    abc.printName()
-    res.send('My second ever api!')
+    
+    res.send('Welcome to my application. I am rakib and a part of FunctionUp Plutonium cohort')
 });
 
 
-router.get('/test-you', function(req, res){
-    res.send('This is the second routes implementation')
-})
 
-router.get('/give-me-students-data',function(req, res){
-
-})
 module.exports = router;
 // adding this comment for no reason
