@@ -4,7 +4,7 @@ function trim() {
 }
 
 function changetoLowerCase() {
-    const myName="rakib alli"
+    const myName="Rakib Alli"
     const lowerCase=myName.toLowerCase();
     console.log(lowerCase);
 }
@@ -13,6 +13,6 @@ function changetoUpperCase() {
     const upperCase=myName.toUpperCase();
     console.log(upperCase);
 }
-module.exports.trim=trim;
-module.exports.changetoLowerCase=changetoLowerCase;
-module.exports.changetoUpperCase=changetoUpperCase;
+module.exports = { trim,changetoLowerCase,changetoUpperCase };
+// module.exports.changetoLowerCase=changetoLowerCase;
+// module.exports.changetoUpperCase=changetoUpperCase;
